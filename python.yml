@@ -1,0 +1,8 @@
+- hosts: test
+  become: yes
+  tasks:
+     - name: execute the pythonscript
+       command: '/ansible/samplepython.py'
+       register: find_output
+     - debug:
+          var: find_output
